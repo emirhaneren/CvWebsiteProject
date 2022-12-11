@@ -13,7 +13,7 @@ namespace CvWebsiteProject
         DbCvEntitiyEntities db = new DbCvEntitiyEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Repeater1.DataSource = db.TblHakkimda.ToList(); ;
+            Repeater1.DataSource = db.TblHakkimda.ToList();
             Repeater1.DataBind();
 
             Repeater2.DataSource = db.TblHakkimda.ToList();
@@ -21,6 +21,9 @@ namespace CvWebsiteProject
 
             Repeater3.DataSource = db.TblHakkimda.ToList();
             Repeater3.DataBind();
+
+            Repeater4.DataSource = db.TblYetenekler.ToList();
+            Repeater4.DataBind();
         }
     }
 }
